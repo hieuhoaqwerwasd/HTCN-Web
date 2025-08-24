@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Phần 3: Biểu mẫu nâng cao</h1>
+     <form action="login.php" method="post">
+        <h2>Đăng nhập</h2>
+        <label>Username:</label>
+        <input type="text" name="username" required><br><br>
+        
+        <label>Password:</label>
+        <input type="password" name="password" required><br><br>
+        
+        <button type="submit">Đăng nhập</button>
+    </form>
+    <form action="survey.php" method="post">
+
+        <h2>Khảo sát ý kiến</h2>
+        
+        <p>Bạn có hài lòng với dịch vụ của chúng tôi không?</p>
+        <input type="radio" name="satisfaction" value="yes"> Có
+        <input type="radio" name="satisfaction" value="no"> Không
+        
+        <p>Bạn thường sử dụng dịch vụ nào?</p>
+        <input type="checkbox" name="service[]" value="giao_hang"> Giao hàng
+        <input type="checkbox" name="service[]" value="tai_cho"> Tại chỗ
+        <input type="checkbox" name="service[]" value="online"> Online
+        
+        <p>Bạn sẽ giới thiệu dịch vụ của chúng tôi chứ?</p>
+        <select name="recommend">
+            <option value="yes">Có</option>
+            <option value="no">Không</option>
+            <option value="maybe">Có thể</option>
+        </select>
+        
+        <p>Ý kiến thêm:</p>
+        <textarea name="feedback" rows="4" cols="40"></textarea><br><br>
+        
+        <button type="submit">Gửi khảo sát</button>
+    </form>
+
+    <form action="booking.php" method="post">
+        <h2>Đặt bàn</h2>
+        
+        <label>Tên khách hàng:</label>
+        <input type="text" name="name" required><br><br>
+        
+        <label>Số người:</label>
+        <input type="number" name="people" min="1" required><br><br>
+        
+        <label>Ngày giờ:</label>
+        <input type="datetime-local" name="datetime" required><br><br>
+        
+        <label>Yêu cầu đặc biệt:</label><br>
+        <textarea name="note" rows="3" cols="40"></textarea><br><br>
+        
+        <button type="submit">Đặt bàn</button>
+    </form>
+
+    <form action="feedback.php" method="post">
+        <h2>Gửi phản hồi</h2>
+        
+        <label>Đánh giá sao:</label><br>
+        <input type="radio" name="rating" value="1"> 1 sao
+        <input type="radio" name="rating" value="2"> 2 sao
+        <input type="radio" name="rating" value="3"> 3 sao
+        <input type="radio" name="rating" value="4"> 4 sao
+        <input type="radio" name="rating" value="5"> 5 sao
+        <br><br>
+        
+        <label>Ý kiến:</label><br>
+        <textarea name="comment" rows="4" cols="40"></textarea><br><br>
+        
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+        
+        <button type="submit">Gửi phản hồi</button>
+    </form>
+
+    <form action="payment.php" method="post">
+        <h2>Thanh toán đơn hàng</h2>
+        
+        <label>Họ tên:</label>
+        <input type="text" name="fullname" required><br><br>
+        
+        <label>Số điện thoại:</label>
+        <input type="tel" name="phone" required><br><br>
+        
+        <label>Địa chỉ:</label><br>
+        <textarea name="address" rows="3" cols="40" required></textarea><br><br>
+        
+        <label>Hình thức thanh toán:</label><br>
+        <input type="radio" name="payment" value="cod"> Thanh toán khi nhận hàng<br>
+        <input type="radio" name="payment" value="card"> Thẻ tín dụng<br>
+        <input type="radio" name="payment" value="bank"> Chuyển khoản<br><br>
+        
+        <button type="submit">Thanh toán</button>
+    </form>
+
+</body>
+</html>
